@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-05-29
+- chore: ignore local .agents skills folder and track skills-lock.json (cd72179)
+
+## 2026-05-28
+- docs: auto-generate Changelog.md [skip ci] (784ec55)
+
 ## 2026-05-28
 - chore: add workflow_dispatch trigger to CI workflow (4d71f14)
 
