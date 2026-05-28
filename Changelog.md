@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 ## 2026-05-29
+- chore: enable strict linting and refactor to remove any types (cf7f33d)
+
+## 2026-05-28
+- docs: auto-generate Changelog.md [skip ci] (b5695c7)
+
+## 2026-05-29
 - feat(deps): Phase 3 - upgrade core framework to Nuxt 4 with compatibilityVersion 4 (e7755c6)
 
 ## 2026-05-29
