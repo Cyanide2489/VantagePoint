@@ -23,6 +23,7 @@
   "devDependencies": {
     "@fontsource/ibm-plex-sans": "^5.2.8",
     "@fontsource/noto-sans-tc": "^5.2.9",
+    "@ibm/plex-sans-tc": "^1.1.1",
     "@nuxt/eslint": "^0.7.3",
     "@nuxt/test-utils": "^4.0.3",
     "@nuxtjs/tailwindcss": "^6.12.2",

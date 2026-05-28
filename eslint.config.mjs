@@ -5,6 +5,9 @@ export default withNuxt(
   // 1. General rules applying to all files
   {
     rules: {
+      // Stylistic configuration overrides
+      '@stylistic/max-statements-per-line': 'off',
+
       // JavaScript/ESLint standard strict rules
       'no-console': ['error', { allow: ['warn', 'error'] }],
       'no-debugger': 'error',
@@ -24,13 +27,13 @@ export default withNuxt(
         argsIgnorePattern: '^_',
         varsIgnorePattern: '^_',
         caughtErrors: 'all',
-        caughtErrorsIgnorePattern: '^_'
+        caughtErrorsIgnorePattern: '^_',
       }],
       '@typescript-eslint/no-non-null-assertion': 'error',
 
       // Vue strict rules
       'vue/multi-word-component-names': ['error', {
-        ignores: ['index', 'about', 'onboarding', 'results', '[domain]']
+        ignores: ['index', 'about', 'onboarding', 'results', '[domain]'],
       }],
       'vue/require-default-prop': 'error',
       'vue/require-explicit-emits': 'error',
@@ -38,19 +41,19 @@ export default withNuxt(
         html: {
           void: 'any',
           normal: 'always',
-          component: 'always'
+          component: 'always',
         },
         svg: 'always',
-        math: 'always'
+        math: 'always',
       }],
       'vue/component-name-in-template-casing': ['error', 'PascalCase'],
       'vue/no-unused-vars': 'error',
       'vue/no-use-v-if-with-v-for': 'error',
       'vue/valid-v-slot': 'error',
       'vue/block-lang': ['error', {
-        script: { lang: 'ts' }
-      }]
-    }
+        script: { lang: 'ts' },
+      }],
+    },
   },
   // 2. Type-aware rules applying only to TS/Vue files
   {
@@ -63,18 +66,18 @@ export default withNuxt(
             'nuxt.config.ts',
             'playwright.config.ts',
             'vitest.config.ts',
-            'e2e/assessment.spec.ts'
-          ]
+            'e2e/assessment.spec.ts',
+          ],
         },
         tsconfigRootDir: import.meta.dirname,
-      }
+      },
     },
     rules: {
       '@typescript-eslint/consistent-type-imports': ['error', {
         prefer: 'type-imports',
-        fixStyle: 'inline-type-imports'
+        fixStyle: 'inline-type-imports',
       }],
-      '@typescript-eslint/no-dynamic-delete': 'error'
-    }
-  }
+      '@typescript-eslint/no-dynamic-delete': 'error',
+    },
+  },
 )

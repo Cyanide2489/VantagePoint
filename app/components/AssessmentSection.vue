@@ -1,37 +1,37 @@
 <script setup lang="ts">
-import type { Section } from "~/composables/useSocData";
-import { useAssessmentStore } from "~/stores/assessment";
+import type { Section } from '~/composables/useSocData'
+import { useAssessmentStore } from '~/stores/assessment'
 
 const props = defineProps<{
-  section: Section;
-  index: number;
-  expandAllTick: number;
-  collapseAllTick: number;
-}>();
+  section: Section
+  index: number
+  expandAllTick: number
+  collapseAllTick: number
+}>()
 
-const store = useAssessmentStore();
+const store = useAssessmentStore()
 
-const codes = computed(() => props.section.questions.map((q) => q.code));
+const codes = computed(() => props.section.questions.map(q => q.code))
 const answeredValues = computed(() =>
-  codes.value.map((c) => store.answers[c] ?? 0).filter((v) => v >= 1)
-);
-const done = computed(() => answeredValues.value.length);
-const total = computed(() => codes.value.length);
-const complete = computed(() => total.value > 0 && done.value === total.value);
+  codes.value.map(c => store.answers[c] ?? 0).filter(v => v >= 1),
+)
+const done = computed(() => answeredValues.value.length)
+const total = computed(() => codes.value.length)
+const complete = computed(() => total.value > 0 && done.value === total.value)
 const avg = computed(() =>
   answeredValues.value.length
     ? answeredValues.value.reduce((a, b) => a + b, 0) / answeredValues.value.length
-    : 0
-);
+    : 0,
+)
 
 // UI-only state (not persisted): collapse once complete, expand while in progress.
-const expanded = ref(!complete.value);
+const expanded = ref(!complete.value)
 
 watch(complete, (now, before) => {
-  if (now && !before) {expanded.value = false;} // auto-collapse on completion
-});
-watch(() => props.expandAllTick, () => (expanded.value = true));
-watch(() => props.collapseAllTick, () => (expanded.value = false));
+  if (now && !before) { expanded.value = false } // auto-collapse on completion
+})
+watch(() => props.expandAllTick, () => (expanded.value = true))
+watch(() => props.collapseAllTick, () => (expanded.value = false))
 </script>
 
 <template>
@@ -44,7 +44,11 @@ watch(() => props.collapseAllTick, () => (expanded.value = false));
       @click="expanded = !expanded"
     >
       <div class="min-w-0 flex-1">
-        <BilingualHeading :value="section.title" level="section" :eyebrow="`項目 ${section.no}`" />
+        <BilingualHeading
+          :value="section.title"
+          level="section"
+          :eyebrow="`項目 ${section.no}`"
+        />
       </div>
       <span
         v-if="complete"
@@ -54,19 +58,34 @@ watch(() => props.collapseAllTick, () => (expanded.value = false));
         v-else
         class="shrink-0 rounded-full bg-stone-100 px-2 py-0.5 text-xs font-medium text-stone-500"
       >{{ done }}/{{ total }}</span>
-      <span class="shrink-0 text-stone-500 transition" :class="expanded ? 'rotate-180' : ''">▾</span>
+      <span
+        class="shrink-0 text-stone-500 transition"
+        :class="expanded ? 'rotate-180' : ''"
+      >▾</span>
     </button>
 
     <!-- content -->
-    <div v-show="expanded" class="space-y-3">
-      <template v-for="(q, qi) in section.questions" :key="q.code">
+    <div
+      v-show="expanded"
+      class="space-y-3"
+    >
+      <template
+        v-for="(q, qi) in section.questions"
+        :key="q.code"
+      >
         <div
           v-if="q.category && (qi === 0 || section.questions[qi - 1].category?.en !== q.category.en)"
           class="pt-1"
         >
-          <BilingualHeading :value="q.category" level="category" />
+          <BilingualHeading
+            :value="q.category"
+            level="category"
+          />
         </div>
-        <QuestionCard :question="q" :index="qi" />
+        <QuestionCard
+          :question="q"
+          :index="qi"
+        />
       </template>
     </div>
   </section>
