@@ -1,0 +1,125 @@
+{
+  "Have you formally described the security monitoring service?": "您是否已正式描述資安監控服務？",
+  "Basic documentation of service in place": "已有該服務的基本文件",
+  "Single document, full description of service": "彙整為單一文件，完整描述該服務",
+
+  "Is the service measured for quality?": "該服務是否衡量品質？",
+  "Service not measured for quality": "未衡量服務品質",
+  "Metrics defined, applied in an ad-hoc fashion": "已定義指標，並以臨機方式套用",
+  "Metrics defined, applied in a structured but informal fashion": "已定義指標，並以結構化但非正式的方式套用",
+  "Metrics formalized and used in regular reports": "指標已正式化並用於定期報告",
+  "Formal and approved metrics in place, feedback used for improvement": "已有正式且經核准的指標，並將回饋用於改善",
+
+  "Is the service measured for service delivery in accordance with service levels?": "該服務是否依服務水準衡量其服務交付？",
+  "Service not measured": "未衡量服務",
+  "SLA defined, measured in an ad-hoc fashion": "已定義 SLA，並以臨機方式衡量",
+  "SLA defined, measured periodically but not reported": "已定義 SLA 並定期衡量，但未提報",
+  "SLA compliance reported periodically, not discussed with customers": "定期提報 SLA 符合度，但未與客戶討論",
+  "SLA compliance discussed with customers regularly for improvement": "定期與客戶討論 SLA 符合度以進行改善",
+
+  "Are customers and/or stakeholders regularly updated about the service?": "是否定期向客戶及／或利害關係人提供服務的更新資訊？",
+  "No updates sent to customers/stakeholders": "未向客戶／利害關係人提供更新",
+  "Ad-hoc updates sent to some customers/stakeholders": "臨機向部分客戶／利害關係人提供更新",
+  "Frequent updates sent to most customers/stakeholders": "經常向大部分客戶／利害關係人提供更新",
+  "Periodical updates sent to all customers/stakeholders": "定期向所有客戶／利害關係人提供更新",
+  "Periodical updates sent and discussed with all customers/stakeholders": "定期向所有客戶／利害關係人提供更新並共同討論",
+
+  "Is there a contractual agreement between the SOC and the customers?": "SOC 與客戶之間是否有契約協議？",
+
+  "Is sufficient personnel allocated to the process to ensure required service delivery?": "是否配置足夠人力於此流程，以確保所需的服務交付？",
+  "No personnel allocated": "未配置人力",
+  "Personnel allocated, but not sufficient for required service delivery": "已配置人力，但不足以支應所需服務交付",
+  "Personnel allocated, not dedicated for this service": "已配置人力，但非專責於此服務",
+  "Sufficient dedicated personnel available, not fully trained and capable": "已有足夠的專責人員，但未完全受訓或具備能力",
+  "Sufficient dedicated personnel available, trained and fully capable": "已有足夠的專責人員，且受訓並完全具備能力",
+
+  "Is the service aligned with other relevant processes?": "該服務是否與其他相關流程對齊？",
+  "Process not aligned": "流程未對齊",
+  "Alignment done in an ad-hoc fashion": "以臨機方式進行對齊",
+  "Alignment done regularly, but not in a structured fashion": "定期進行對齊，但未採結構化方式",
+  "Alignment done structurally & regularly with most relevant processes": "與大部分相關流程有系統地定期對齊",
+  "Alignment done structurally & regularly with all relevant processes": "與所有相關流程有系統地定期對齊",
+
+  "Is there a incident resolution / service continuity process in place for this service?": "該服務是否有事件處置／服務持續流程？",
+  "No such process in place": "尚無此類流程",
+  "Continuity requirements identified, process not yet in place": "已辨識持續性需求，但尚無流程",
+  "Basic service continuity process in place": "已有基本的服務持續流程",
+  "Full process in place, not approved by relevant stakeholders": "已有完整流程，但未經相關利害關係人核准",
+  "Full process in place, formally approved by relevant stakeholders": "已有完整流程，並經相關利害關係人正式核准",
+
+  "Has a set of procedures been created for this service?": "是否為該服務建立了一套程序？",
+  "No procedures in place": "尚無程序",
+  "Basic procedures in place, used in an ad-hoc fashion": "已有基本程序，並以臨機方式使用",
+  "All procedures in place, operational but not used structurally": "已有所有程序並可運作，但未有系統性使用",
+  "Procedures in place, operational and used structurally": "已有程序，可運作並有系統性使用",
+  "Procedures in place, formally published and regularly reviewed": "已有程序，正式發布並定期檢討",
+
+  "Is there an onboarding and offloading procedure for this service?": "該服務是否有納管（onboarding）與卸載（offloading）程序？",
+  "Full procedures in place, operational but not used structurally": "已有完整程序並可運作，但未有系統性使用",
+
+  "Are best practices applied to the service?": "該服務是否採用最佳實務？",
+  "Best practices not applied": "未採用最佳實務",
+  "Best practices identified, but not applied": "已辨識最佳實務，但未採用",
+  "Best practices applied, but not structurally": "已採用最佳實務，但未成體系",
+  "Best practices applied to service architecture and service delivery": "已將最佳實務套用於服務架構與服務交付",
+  "Best practices applied and adherence checked regularly": "已採用最佳實務並定期檢查遵循情形",
+
+  "Are use cases used in the security monitoring service?": "資安監控服務是否運用使用案例？",
+  "Use cases not used": "未運用使用案例",
+  "Use cases undocumented and used in an ad-hoc fashion": "使用案例未文件化，並以臨機方式運用",
+  "Use cases documented and applied structurally": "使用案例已文件化並有系統性運用",
+  "Use cases embedded in the security monitoring processes": "使用案例已納入資安監控流程",
+  "Use cases fully embedded, tuning and Life Cycle Management applied": "使用案例已完全納入，並進行調校與生命週期管理",
+
+  "Is process data gathered for prediction of service performance?": "是否蒐集流程資料以預測服務績效？",
+  "Service performance not measured": "未衡量服務績效",
+  "Goals set for service performance, measured ad-hoc": "已設定服務績效目標，並以臨機方式衡量",
+  "Goals set for service performance, measured structurally but informally": "已設定服務績效目標，並有系統但非正式地衡量",
+  "Goals set for service performance, measured structurally and formally": "已設定服務績效目標，並有系統且正式地衡量",
+  "Continuous measurement to determine progress & adjust process": "持續衡量以判定進度並調整流程",
+
+  "Is the service continuously being improved based on improvement goals?": "該服務是否依改善目標持續改善？",
+  "Improvement not done": "未進行改善",
+  "Goals defined, but not pursued": "已定義目標，但未推動",
+  "Goals defined and pursued structurally, but not formalized": "已定義目標並有系統地推動，但未正式化",
+  "Goals formally defined and pursued structurally and periodically": "已正式定義目標並有系統地定期推動",
+  "Continuous improvement based on targets and feedback loops": "依目標與回饋循環持續改善",
+
+  "Have you adopted a standard for the Security Incident Management process?": "您是否為資安事件管理流程採用了標準？",
+  "Standard not adopted": "未採用標準",
+  "Awareness of standards, used in ad-hoc fashion": "知道有相關標準，並以臨機方式使用",
+  "Standard used structurally as reference during incident response": "在事件應變中有系統地以標準作為參考",
+  "Many elements adopted, not fully aligned": "已採用許多要素，但未完全對齊",
+  "Standard fully adopted, process set up and executed using standard": "已完全採用標準，並依標準建立與執行流程",
+
+  "Have you formally described the security incident management process?": "您是否已正式描述資安事件管理流程？",
+
+  "Is the incident response team authorized to perform (invasive) actions when required?": "事件應變團隊是否在必要時被授權執行（侵入式）處置行動？",
+  "No mandate": "未獲授權",
+  "Mandate requested in ad-hoc fashion during incident response": "在事件應變過程中以臨機方式請求授權",
+  "Mandate informally given, not supported by all stakeholders": "已非正式授權，但未獲所有利害關係人支持",
+  "Mandate given and supported by all stakeholders, not formalized": "已授權並獲所有利害關係人支持，但未正式化",
+  "Full mandate, formally documented, approved and published": "已完整授權，並正式文件化、核准與發布",
+
+  "Is the service supported by predefined workflows or scenarios?": "該服務是否有預先定義的工作流程或情境劇本支援？",
+  "No workflows or scenarios in place": "尚無工作流程或情境劇本",
+  "Basic workflows in place, not covering all incident types": "已有基本工作流程，但未涵蓋所有事件類型",
+  "Workflows created for all incident types, not formalized": "已為所有事件類型建立工作流程，但未正式化",
+  "Formal workflows created, approved & published for all incident types": "已為所有事件類型建立、核准並發布正式工作流程",
+
+  "Have you formally described the forensic analysis service?": "您是否已正式描述鑑識分析服務？",
+  "Procedures in place, formally published and fully operationalized": "已有程序，正式發布並完全落實運作",
+  "Formal workflows created, approved and published for all incident types": "已為所有事件類型建立、核准並發布正式工作流程",
+
+  "Have you formally described the threat intelligence service?": "您是否已正式描述威脅情資服務？",
+
+  "Do you use a standardized threat hunting methodology?": "您是否採用標準化的威脅獵捕方法論？",
+  "Methodology not adopted": "未採用方法論",
+  "Awareness of methodologies, used in ad-hoc fashion": "知道有相關方法論，並以臨機方式使用",
+  "Methodologies used structurally as reference during hunting activities": "在獵捕活動中有系統地以方法論作為參考",
+  "Methodology fully adopted, process set up and executed accordingly": "已完全採用方法論，並據以建立與執行流程",
+
+  "Have you formally described the threat hunting service?": "您是否已正式描述威脅獵捕服務？",
+
+  "Have you formally described the vulnerability management service?": "您是否已正式描述弱點管理服務？"
+}

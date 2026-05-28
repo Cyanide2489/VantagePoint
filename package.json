@@ -1,0 +1,33 @@
+{
+  "name": "vantagepoint-soc-cmm",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test": "vitest run",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.10.1",
+    "chart.js": "^4.4.6",
+    "pinia": "^3.0.1",
+    "pinia-plugin-persistedstate": "^4.7.1",
+    "vue-chartjs": "^5.3.2"
+  },
+  "devDependencies": {
+    "@fontsource/ibm-plex-sans": "^5.2.8",
+    "@fontsource/noto-sans-tc": "^5.2.9",
+    "@nuxt/test-utils": "^3.15.4",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@playwright/test": "^1.49.0",
+    "happy-dom": "^15.11.7",
+    "lighthouse": "^12.8.2",
+    "nuxt": "3.17.7",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  }
+}
