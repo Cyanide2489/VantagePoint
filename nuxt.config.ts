@@ -42,6 +42,19 @@ export default defineNuxtConfig({
             "%3Crect width='32' height='32' rx='8' fill='%23a64c2b'/%3E" +
             "%3Ctext x='16' y='22' font-family='sans-serif' font-size='14' font-weight='700' fill='white' text-anchor='middle'%3ESC%3C/text%3E%3C/svg%3E",
         },
+        {
+          rel: "preconnect",
+          href: "https://fonts.googleapis.com",
+        },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossorigin: "",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+TC:wght@400;500;600;700&display=swap",
+        },
       ],
     },
   },

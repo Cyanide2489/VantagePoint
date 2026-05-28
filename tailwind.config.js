@@ -24,7 +24,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['"IBM Plex Sans"', '"Noto Sans TC"', '"PingFang TC"', '"Microsoft JhengHei"', "system-ui", "sans-serif"],
+        sans: ['"IBM Plex Sans"', '"IBM Plex Sans TC"', '"Noto Sans TC"', '"PingFang TC"', '"Microsoft JhengHei"', "system-ui", "sans-serif"],
       },
     },
   },
