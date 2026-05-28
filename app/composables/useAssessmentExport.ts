@@ -1,6 +1,30 @@
-import { useSocData } from "~/composables/useSocData";
+import { useSocData, type Bi } from "~/composables/useSocData";
 import { useScoring, levelFor } from "~/composables/useScoring";
 import { useAssessmentStore } from "~/stores/assessment";
+
+export interface ExportNistSubcategory {
+  code: string;
+  subcategory: Bi;
+  score: number;
+  answered: number;
+  total: number;
+}
+
+export interface ExportSectionItem {
+  domainLetter: string;
+  no: string;
+  title: Bi;
+  score: number;
+  answeredCount: number;
+  totalQuestions: number;
+}
+
+export interface UnansweredQuestionItem {
+  code: string;
+  domain: { letter: string; title: Bi };
+  section: { no: string; title: Bi };
+  text: Bi;
+}
 
 export function useAssessmentExport() {
   const { domains, nist, allQuestions } = useSocData();
@@ -38,7 +62,7 @@ export function useAssessmentExport() {
     const currentOverallLevel = levelFor(currentOverallScore);
 
     // 1. Build NIST Coverage (Bilingual)
-    const byFunction: Record<string, { zh: string; en: string; values: number[]; subs: any[] }> = {};
+    const byFunction: Record<string, { zh: string; en: string; values: number[]; subs: ExportNistSubcategory[] }> = {};
     for (const entry of Object.values(nist)) {
       const zhFn = entry.function.zh;
       const enFn = entry.function.en;
@@ -79,7 +103,7 @@ export function useAssessmentExport() {
       .sort((a, b) => a.score - b.score || a.letter.localeCompare(b.letter));
 
     // Get section lists with scores
-    const sectionItems: any[] = [];
+    const sectionItems: ExportSectionItem[] = [];
     domainScores.value.forEach((d) => {
       d.sections.forEach((s) => {
         sectionItems.push({
@@ -103,7 +127,7 @@ export function useAssessmentExport() {
       );
 
     // 3. Build unansweredQuestions (Detailed Reference Objects)
-    const unansweredQuestionsList: any[] = [];
+    const unansweredQuestionsList: UnansweredQuestionItem[] = [];
     domains.forEach((d) => {
       d.sections.forEach((s) => {
         s.questions.forEach((q) => {

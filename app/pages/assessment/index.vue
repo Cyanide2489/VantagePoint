@@ -44,7 +44,8 @@ const overall = computed(() => (totalQuestions ? store.answeredCount / totalQues
           </div>
           <div class="mt-1.5 flex items-center gap-2">
             <div class="h-1.5 flex-1 overflow-hidden rounded-full bg-stone-100">
-              <div class="h-full rounded-full bg-brand-500 transition-all"
+              <div
+class="h-full rounded-full bg-brand-500 transition-all"
                 :style="{ width: progressOf(d.letter).ratio * 100 + '%' }" />
             </div>
             <span class="shrink-0 text-xs text-stone-500">

@@ -14,10 +14,10 @@ const step = ref(0);
 const orgName = ref(store.orgName);
 
 const next = () => {
-  if (step.value < steps.length - 1) step.value++;
+  if (step.value < steps.length - 1) {step.value++;}
 };
 const prev = () => {
-  if (step.value > 0) step.value--;
+  if (step.value > 0) {step.value--;}
 };
 const begin = () => {
   store.orgName = orgName.value.trim();
@@ -35,11 +35,13 @@ const begin = () => {
           :class="i <= step ? 'text-brand-700' : 'text-stone-500'"
           @click="i < step && (step = i)"
         >
-          <span class="grid h-6 w-6 place-items-center rounded-full text-xs font-bold"
+          <span
+class="grid h-6 w-6 place-items-center rounded-full text-xs font-bold"
             :class="i <= step ? 'bg-brand-200 text-brand-900' : 'bg-stone-200 text-stone-500'">{{ i + 1 }}</span>
           <span class="hidden text-sm font-medium sm:inline">{{ s }}</span>
         </button>
-        <span v-if="i < steps.length - 1" class="h-px flex-1"
+        <span
+v-if="i < steps.length - 1" class="h-px flex-1"
           :class="i < step ? 'bg-brand-400' : 'bg-stone-200'" />
       </li>
     </ol>

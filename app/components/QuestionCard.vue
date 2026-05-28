@@ -4,7 +4,7 @@ import { useI18n } from "~/composables/useI18n";
 import { useAssessmentStore } from "~/stores/assessment";
 
 const props = defineProps<{ question: Question; index: number }>();
-const { lang, t, other, hasZh } = useI18n();
+const { lang, t, other } = useI18n();
 const store = useAssessmentStore();
 
 const LABEL_ZH: Record<string, string> = {
@@ -18,13 +18,13 @@ const label = (en: string) => (lang.value === "zh" ? LABEL_ZH[en] ?? en : en);
 
 const current = computed(() => store.answers[props.question.code] ?? 0);
 const select = (v: number) => {
-  if (current.value === v) store.clearAnswer(props.question.code);
-  else store.setAnswer(props.question.code, v);
+  if (current.value === v) {store.clearAnswer(props.question.code);}
+  else {store.setAnswer(props.question.code, v);}
 };
 </script>
 
 <template>
-  <div class="card p-4 sm:p-5" :id="`q-${question.code}`">
+  <div :id="`q-${question.code}`" class="card p-4 sm:p-5">
     <div class="flex items-start gap-3">
       <span class="mt-0.5 shrink-0 rounded-none bg-brand-50 px-2 py-1 text-xs font-semibold text-brand-700">
         {{ question.code }}
@@ -40,7 +40,8 @@ const select = (v: number) => {
           <p class="mt-1 text-sm text-stone-500">{{ other(question.text) }}</p>
         </details>
         <div v-if="question.nist?.length" class="mt-2 flex flex-wrap gap-1">
-          <span v-for="n in question.nist" :key="n"
+          <span
+v-for="n in question.nist" :key="n"
             class="rounded-full bg-stone-100 px-2 py-0.5 text-[11px] font-medium text-stone-500">
             NIST · {{ n }}
           </span>
@@ -64,7 +65,8 @@ const select = (v: number) => {
             :class="current === lvl.value ? 'bg-brand-200 text-brand-900' : 'bg-stone-100 text-stone-500'"
           >{{ lvl.value }}</span>
           <span class="min-w-0 flex-1">
-            <span class="block text-sm font-semibold"
+            <span
+class="block text-sm font-semibold"
               :class="current === lvl.value ? 'text-brand-800' : 'text-stone-700'">
               {{ label(lvl.label) }}
             </span>

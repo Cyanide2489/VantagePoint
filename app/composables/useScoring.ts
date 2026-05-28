@@ -1,6 +1,14 @@
 import { computed } from "vue";
-import { useSocData } from "~/composables/useSocData";
+import { useSocData, type Bi } from "~/composables/useSocData";
 import { useAssessmentStore } from "~/stores/assessment";
+
+export interface ScoringNistSubcategory {
+  code: string;
+  subcategory: Bi;
+  score: number;
+  answered: number;
+  total: number;
+}
 
 // SOC-CMM maturity levels (0-5) with Taiwan zh-TW descriptions.
 export const MATURITY_LEVELS = [
@@ -55,7 +63,7 @@ export function useScoring() {
 
   // NIST CSF 2.0 coverage: per function, mean maturity of mapped+answered questions.
   const nistCoverage = computed(() => {
-    const byFunction: Record<string, { name: string; values: number[]; subs: any[] }> = {};
+    const byFunction: Record<string, { name: string; values: number[]; subs: ScoringNistSubcategory[] }> = {};
     for (const entry of Object.values(nist)) {
       const fn = entry.function.zh || entry.function.en;
       const vals = answeredValues(entry.questions);
@@ -66,7 +74,7 @@ export function useScoring() {
         answered: vals.length,
         total: entry.questions.length,
       };
-      if (!byFunction[fn]) byFunction[fn] = { name: fn, values: [], subs: [] };
+      if (!byFunction[fn]) {byFunction[fn] = { name: fn, values: [], subs: [] };}
       byFunction[fn].values.push(...vals);
       byFunction[fn].subs.push(sub);
     }

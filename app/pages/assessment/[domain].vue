@@ -15,7 +15,7 @@ const idx = computed(() => indexOf(letter.value));
 
 // redirect unknown domain codes back to the overview
 watchEffect(() => {
-  if (letter.value && !domain.value) router.replace("/assessment");
+  if (letter.value && !domain.value) {router.replace("/assessment");}
 });
 
 const prev = computed(() => (idx.value > 0 ? domains[idx.value - 1] : null));
@@ -23,10 +23,9 @@ const next = computed(() => (idx.value < domains.length - 1 ? domains[idx.value 
 
 const go = (to: string) => {
   router.push(to);
-  if (import.meta.client) window.scrollTo({ top: 0, behavior: "smooth" });
+  if (import.meta.client) {window.scrollTo({ top: 0, behavior: "smooth" });}
 };
 
-const overall = computed(() => (totalQuestions ? store.answeredCount / totalQuestions : 0));
 const dp = computed(() => progressOf(letter.value));
 
 // signals to drive expand/collapse across all sections of the current domain
@@ -67,13 +66,16 @@ const collapseAllTick = ref(0);
 
     <!-- domain header + per-domain progress -->
     <div class="space-y-3">
-      <BilingualHeading :value="domain.title" level="domain"
+      <BilingualHeading
+:value="domain.title" level="domain"
         :eyebrow="`構面 ${idx + 1} / ${domains.length}`" />
       <ProgressBar :value="dp.ratio" :label="`本構面進度 · ${dp.done} / ${dp.total} 題`" />
       <div class="no-print flex justify-end gap-2 text-xs">
-        <button class="rounded-none border border-stone-200 px-2.5 py-1 text-stone-500 hover:bg-stone-50"
+        <button
+class="rounded-none border border-stone-200 px-2.5 py-1 text-stone-500 hover:bg-stone-50"
           @click="expandAllTick++">全部展開</button>
-        <button class="rounded-none border border-stone-200 px-2.5 py-1 text-stone-500 hover:bg-stone-50"
+        <button
+class="rounded-none border border-stone-200 px-2.5 py-1 text-stone-500 hover:bg-stone-50"
           @click="collapseAllTick++">全部收合</button>
       </div>
     </div>

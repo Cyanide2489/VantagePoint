@@ -19,7 +19,8 @@ const domainIcons: Record<string, string> = { B: "🏢", P: "👥", M: "⚙️",
           每一題都附有各成熟度等級的情境描述，即使非資安專業人員也能輕鬆作答。
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <NuxtLink :to="store.answeredCount > 0 ? '/assessment' : '/onboarding'"
+          <NuxtLink
+:to="store.answeredCount > 0 ? '/assessment' : '/onboarding'"
             class="btn bg-white text-brand-800 hover:bg-brand-50">
             {{ store.answeredCount > 0 ? "繼續評估" : "開始評估" }}
           </NuxtLink>
@@ -44,7 +45,8 @@ const domainIcons: Record<string, string> = { B: "🏢", P: "👥", M: "⚙️",
     <section>
       <h2 class="mb-3 text-lg font-semibold text-stone-800">評估構面（共 {{ meta.questionsCount }} 題）</h2>
       <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        <NuxtLink v-for="d in domains" :key="d.letter" :to="`/assessment/${d.letter}`"
+        <NuxtLink
+v-for="d in domains" :key="d.letter" :to="`/assessment/${d.letter}`"
           class="card flex items-start gap-3 p-4 transition hover:border-brand-300 hover:shadow-md">
           <span class="text-2xl">{{ domainIcons[d.letter] }}</span>
           <div>

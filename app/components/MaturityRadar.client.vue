@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Radar } from "vue-chartjs";
 import {
-  Chart as ChartJS, RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend,
+  Chart as ChartJS, RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend, type TooltipItem,
 } from "chart.js";
 
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
@@ -46,7 +46,7 @@ const options = computed(() => ({
     legend: { display: false },
     tooltip: {
       callbacks: {
-        label: (ctx: any) => `${ctx.label}：${Number(ctx.parsed.r).toFixed(1)} / 5`,
+        label: (ctx: TooltipItem<"radar">) => `${ctx.label}：${Number(ctx.parsed.r).toFixed(1)} / 5`,
       },
     },
   },

@@ -12,13 +12,13 @@ export function useI18n() {
 
   // primary string for the current language, falling back to the other.
   const t = (bi?: Bi | null): string => {
-    if (!bi) return "";
+    if (!bi) {return "";}
     const primary = bi[lang.value];
     return primary && primary.trim() ? primary : bi.en || bi.zh || "";
   };
   // secondary (the other language) for collapsible display.
   const other = (bi?: Bi | null): string => {
-    if (!bi) return "";
+    if (!bi) {return "";}
     const sec = lang.value === "zh" ? bi.en : bi.zh;
     return sec && sec.trim() ? sec : "";
   };

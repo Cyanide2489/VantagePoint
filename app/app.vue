@@ -35,9 +35,11 @@ const { lang, setLang } = useI18n();
 
     <footer class="no-print border-t border-stone-200 py-6 text-center text-xs text-stone-600">
       <p>
-        評估題目源自 <a href="https://www.soc-cmm.com" target="_blank" rel="noopener noreferrer"
+        評估題目源自 <a
+href="https://www.soc-cmm.com" target="_blank" rel="noopener noreferrer"
           class="underline hover:text-brand-600">SOC-CMM</a>（作者 Rob van Os，CC BY-NC-ND 4.0）·
-        對應 <a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener noreferrer"
+        對應 <a
+href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener noreferrer"
           class="underline hover:text-brand-600">NIST CSF 2.0</a>
       </p>
       <p class="mt-1">

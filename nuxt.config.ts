@@ -6,7 +6,12 @@ export default defineNuxtConfig({
   srcDir: "app/",
   ssr: false,
   devtools: { enabled: false },
-  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "pinia-plugin-persistedstate/nuxt"],
+  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "pinia-plugin-persistedstate/nuxt", "@nuxt/eslint"],
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
   // Only self-host the Latin IBM Plex Sans (small). Traditional-Chinese uses the
   // user's system CJK font (PingFang TC / Microsoft JhengHei / Noto Sans TC) to
   // avoid shipping ~100 render-blocking CJK @font-face subsets.

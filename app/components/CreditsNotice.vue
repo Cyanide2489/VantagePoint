@@ -19,7 +19,8 @@ withDefaults(defineProps<{ variant?: "card" | "inline" }>(), { variant: "card" }
         <dd class="mt-1 text-stone-600">
           作者：Rob van Os。本評估題目、情境描述與成熟度尺規源自 SOC-CMM v2.4.2。
           <br />授權方式：創用 CC「姓名標示—非商業性—禁止改作」4.0 國際（CC BY-NC-ND 4.0）。
-          <br />官方網站：<a href="https://www.soc-cmm.com" target="_blank" rel="noopener noreferrer"
+          <br />官方網站：<a
+href="https://www.soc-cmm.com" target="_blank" rel="noopener noreferrer"
             class="text-brand-600 underline hover:text-brand-700">soc-cmm.com</a>
         </dd>
       </div>
@@ -28,7 +29,8 @@ withDefaults(defineProps<{ variant?: "card" | "inline" }>(), { variant: "card" }
         <dd class="mt-1 text-stone-600">
           作者：美國國家標準暨技術研究院（NIST），美國商務部。
           <br />NIST CSF 對應關係參考自 SOC-CMM 提供之 NIST CSF 2.0 對照表。NIST 出版品屬美國政府著作，可自由使用。
-          <br />官方網站：<a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener noreferrer"
+          <br />官方網站：<a
+href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener noreferrer"
             class="text-brand-600 underline hover:text-brand-700">nist.gov/cyberframework</a>
         </dd>
       </div>

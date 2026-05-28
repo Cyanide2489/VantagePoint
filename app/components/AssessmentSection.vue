@@ -28,7 +28,7 @@ const avg = computed(() =>
 const expanded = ref(!complete.value);
 
 watch(complete, (now, before) => {
-  if (now && !before) expanded.value = false; // auto-collapse on completion
+  if (now && !before) {expanded.value = false;} // auto-collapse on completion
 });
 watch(() => props.expandAllTick, () => (expanded.value = true));
 watch(() => props.collapseAllTick, () => (expanded.value = false));

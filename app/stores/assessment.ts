@@ -17,12 +17,13 @@ export const useAssessmentStore = defineStore("assessment", {
 
   actions: {
     setAnswer(code: string, value: number) {
-      if (!this.startedAt) this.startedAt = new Date().toISOString();
+      if (!this.startedAt) {this.startedAt = new Date().toISOString();}
       this.answers[code] = value;
       this.updatedAt = new Date().toISOString();
     },
     clearAnswer(code: string) {
-      delete this.answers[code];
+      const { [code]: _, ...rest } = this.answers;
+      this.answers = rest;
       this.updatedAt = new Date().toISOString();
     },
     reset() {
@@ -35,11 +36,11 @@ export const useAssessmentStore = defineStore("assessment", {
       const { totalQuestions } = useSocData();
       return totalQuestions ? this.answeredCount / totalQuestions : 0;
     },
-    importJson(payload: any) {
-      if (payload && typeof payload.answers === "object") {
-        this.answers = { ...payload.answers };
-        this.orgName = payload.orgName ?? "";
-        this.startedAt = payload.startedAt ?? new Date().toISOString();
+    importJson(payload: Record<string, unknown> | null | undefined) {
+      if (payload && typeof payload.answers === "object" && payload.answers !== null) {
+        this.answers = { ...payload.answers as Record<string, number> };
+        this.orgName = typeof payload.orgName === "string" ? payload.orgName : "";
+        this.startedAt = typeof payload.startedAt === "string" ? payload.startedAt : new Date().toISOString();
         this.updatedAt = new Date().toISOString();
       }
     },

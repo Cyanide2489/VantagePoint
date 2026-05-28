@@ -8,9 +8,9 @@ withDefaults(defineProps<{ label?: string }>(), {
 const store = useAssessmentStore();
 
 const clear = () => {
-  if (!import.meta.client) return;
+  if (!import.meta.client) {return;}
   const ok = window.confirm("確定要清除目前所有答題狀態嗎？此動作無法復原。");
-  if (ok) store.reset();
+  if (ok) {store.reset();}
 };
 </script>
 
