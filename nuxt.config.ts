@@ -39,6 +39,30 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   }, compatibilityDate: '2025-01-01',
+  vite: {
+    css: {
+      postcss: {
+        plugins: [
+          {
+            postcssPlugin: 'inject-font-display',
+            AtRule(atRule) {
+              if (atRule.name === 'font-face') {
+                let hasDisplay = false
+                atRule.walkDecls((decl) => {
+                  if (decl.prop === 'font-display') {
+                    hasDisplay = true
+                  }
+                })
+                if (!hasDisplay) {
+                  atRule.append({ prop: 'font-display', value: 'swap' })
+                }
+              }
+            },
+          },
+        ],
+      },
+    },
+  },
   eslint: {
     config: {
       stylistic: true,
