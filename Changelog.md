@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 
 ## 2026-05-29
+- feat(deps): Phase 3 - upgrade core framework to Nuxt 4 with compatibilityVersion 4 (e7755c6)
+
+## 2026-05-29
+- chore(deps): Phase 2 - upgrade typescript 6, vitest 4, happy-dom 20, and test-utils 4 (58bdf9b)
+
+## 2026-05-29
+- chore(deps): Phase 1 - upgrade @pinia/nuxt to 0.11.3 (ca22866)
+
+## 2026-05-28
+- docs: auto-generate Changelog.md [skip ci] (29538c3)
+
+## 2026-05-29
 - chore: ignore local .agents skills folder and track skills-lock.json (cd72179)
 
 ## 2026-05-28
