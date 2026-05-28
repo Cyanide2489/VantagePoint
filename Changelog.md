@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 ## 2026-05-29
+- style: integrate IBM Plex Sans TC for unified Traditional Chinese typography (e34d661)
+
+## 2026-05-28
+- docs: auto-generate Changelog.md [skip ci] (008233d)
+
+## 2026-05-29
 - chore: enable strict linting and refactor to remove any types (cf7f33d)
 
 ## 2026-05-28
