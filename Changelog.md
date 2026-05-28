@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 ## 2026-05-29
+- perf: inject font-display: swap into @font-face rules via PostCSS to prevent blocking (cd06342)
+
+## 2026-05-28
+- docs: auto-generate Changelog.md [skip ci] (1bc581f)
+
+## 2026-05-29
 - style: auto-fix stylistic eslint errors and integrate self-hosted @ibm/plex-sans-tc font (71d1bb5)
 
 ## 2026-05-28
