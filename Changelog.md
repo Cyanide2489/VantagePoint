@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 ## 2026-05-29
+- style: auto-fix stylistic eslint errors and integrate self-hosted @ibm/plex-sans-tc font (71d1bb5)
+
+## 2026-05-28
+- docs: auto-generate Changelog.md [skip ci] (251e383)
+
+## 2026-05-29
 - style: integrate IBM Plex Sans TC for unified Traditional Chinese typography (e34d661)
 
 ## 2026-05-28
