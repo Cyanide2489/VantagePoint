@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-06-19
+- chore(deps-dev): bump launch-editor from 2.13.2 to 2.14.1 (3299f6f)
+
+## 2026-05-28
+- docs: auto-generate Changelog.md [skip ci] (a7e0b49)
+
 ## 2026-05-29
 - perf: inject font-display: swap into @font-face rules via PostCSS to prevent blocking (cd06342)
 
