@@ -33,6 +33,6 @@
     "lighthouse": "^12.8.2",
     "nuxt": "^4.4.6",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.7"
+    "vitest": "^4.1.11"
   }
 }
